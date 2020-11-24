@@ -218,7 +218,7 @@ global with sharing class EinsteinVisionController {
 
     public static String mustFlag(String name){
         System.debug(name);
-        name += "hello";
+        name += 'hello';
         return name; 
     }
     
