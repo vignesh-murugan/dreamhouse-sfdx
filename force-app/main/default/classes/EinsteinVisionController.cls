@@ -215,6 +215,12 @@ global with sharing class EinsteinVisionController {
             return '{"error": "' + ex.getMessage() + '"}';
         }
     }
+
+    public static String mustFlag(String name){
+        System.debug(name);
+        name += "hello";
+        return name; 
+    }
     
     private static List<Prediction> predictInternal(String sample, String access_token, String model, boolean isBase64) {
         string contentType = HttpFormBuilder.GetContentType();
