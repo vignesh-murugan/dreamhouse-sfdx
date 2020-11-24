@@ -20,6 +20,7 @@ public with sharing class HandlerDashboard implements BotHandler {
             fields.add(new BotField('Name', d.Title, '/lightning/r/Dashboard/' + d.Id + '/view'));
             fields.add(new BotField('Folder', d.FolderName));
             records.add(new BotRecord(fields));
+            update d;
         }
 
         System.debug(records);

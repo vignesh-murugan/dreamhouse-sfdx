@@ -39,5 +39,8 @@ public virtual class BotMessage {
         this.imageURL = imageURL;
     }
 
+    public BotMessage(String author) {
+        this.author = author;
+    }
 
 }
