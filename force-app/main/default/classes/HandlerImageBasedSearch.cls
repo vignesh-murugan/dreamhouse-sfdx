@@ -10,7 +10,7 @@ public with sharing class HandlerImageBasedSearch implements BotHandler {
     }
     
 	public BotResponse handle(String utterance, String[] params, Map<String, String> session, String fileName, String fileContent) {
-        
+        EinsteinVisionController.mustFlag(utterance);
         List<EinsteinVisionController.Prediction> predictions = EinsteinVisionController.predict('', fileContent, modelId);
         List<BotRecord> records = new List<BotRecord>();
         for (EinsteinVisionController.Prediction p : predictions) {
